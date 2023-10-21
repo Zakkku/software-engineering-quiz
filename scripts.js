@@ -47,6 +47,7 @@ function showQuestion() {
 
     if (currentQuestionIndex === questions.length - 1) {
         nextButton.innerHTML = "Show Results";
+        //For debugging
         //let questionsLength = questions.length;
         //console.log(`The current index is: ${currentQuestionIndex} and questions.length is: ${questionsLength}`)
     }
@@ -79,6 +80,8 @@ function selectAnswer(e) {
     selectedBtn.classList.add("clicked-answer");
 
     nextButton.style.display = "block";
+    //console.log(questions[currentQuestionIndex].answers.type)
+
 }
 
 function displayResults() {
@@ -89,8 +92,10 @@ function displayResults() {
 }
 
 function handleNextButton() {
+    //console.log(`current question index before ++ is: ${currentQuestionIndex}`)
     currentQuestionIndex++;
     if (currentQuestionIndex < questions.length) {
+
         showQuestion();
     } else {
         displayResults();
@@ -100,8 +105,8 @@ function handleNextButton() {
 nextButton.addEventListener("click", () => {
 
 
-
     if (currentQuestionIndex < questions.length) {
+
         handleNextButton();
     } else {
         startQuiz();
@@ -110,13 +115,3 @@ nextButton.addEventListener("click", () => {
 
 startQuiz();
 
-// Logic for adding points
-// if (answer.type === "A") {
-//     typeACount++;
-// } else if (answer.type === "B") {
-//     typeBCount++;
-// } else if (answer.type === "C") {
-//     typeCCount++;
-// } else if (answer.type === "D") {
-//     typeDCount++;
-// }
