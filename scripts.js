@@ -135,7 +135,17 @@ function selectAnswer(e) {
 
 function displayResults() {
     resetState();
-    questionElement.innerHTML = `Type A: ${typeACount}, Type B: ${typeBCount}, Type C: ${typeCCount}, Type D: ${typeDCount}`;
+    let usersPersonalityType;
+    if (typeBCount >= typeACount && typeBCount >= typeCCount && typeBCount >= typeDCount) {
+        usersPersonalityType = "You are type B";
+    } else if (typeACount > typeBCount && typeACount >= typeCCount && typeACount >= typeDCount) {
+        usersPersonalityType = "You are type A";
+    } else if (typeCCount > typeACount && typeCCount > typeBCount && typeCCount >= typeDCount) {
+        usersPersonalityType = "You are type C";
+    } else if (typeDCount > typeACount && typeDCount > typeBCount && typeDCount > typeCCount) {
+        usersPersonalityType = "You are type D";
+    }
+    questionElement.innerHTML = usersPersonalityType;
     nextButton.innerHTML = "Try Again";
     nextButton.style.display = "block";
 }
