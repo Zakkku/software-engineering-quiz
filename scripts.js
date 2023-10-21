@@ -35,6 +35,7 @@ function startQuiz() {
     typeCCount = 0;
     typeDCount = 0;
     nextButton.innerHTML = "Next question";
+
     showQuestion();
 }
 
@@ -43,6 +44,12 @@ function showQuestion() {
     let currentQuestion = questions[currentQuestionIndex];
     let questionNo = currentQuestionIndex + 1;
     questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
+
+    if (currentQuestionIndex === questions.length - 1) {
+        nextButton.innerHTML = "Show Results";
+        //let questionsLength = questions.length;
+        //console.log(`The current index is: ${currentQuestionIndex} and questions.length is: ${questionsLength}`)
+    }
 
     currentQuestion.answers.forEach(answer => {
         const button = document.createElement("button");
