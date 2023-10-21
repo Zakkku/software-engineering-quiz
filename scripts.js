@@ -34,6 +34,14 @@ function startQuiz() {
     typeBCount = 0;
     typeCCount = 0;
     typeDCount = 0;
+
+    // Remove the "isSelected" property from all answers
+    questions.forEach(question => {
+        question.answers.forEach(answer => {
+            delete answer.isSelected;
+        });
+    })
+
     nextButton.innerHTML = "Next question";
 
     showQuestion();
