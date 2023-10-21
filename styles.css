@@ -74,3 +74,11 @@ body {
     background: #222;
     color: #fff;
 }
+
+/* Media Queries */
+@media only screen and (max-width: 600px) {
+    .app {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
