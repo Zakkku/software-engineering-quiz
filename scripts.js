@@ -34,7 +34,7 @@ function startQuiz() {
     typeBCount = 0;
     typeCCount = 0;
     typeDCount = 0;
-    nextButton.innerHTML = "Next";
+    nextButton.innerHTML = "Next question";
     showQuestion();
 }
 
@@ -49,6 +49,7 @@ function showQuestion() {
         button.innerHTML = answer.text;
         button.classList.add("btn");
         answerButtons.appendChild(button);
+        button.addEventListener("click", selectAnswer);
     })
 }
 
@@ -59,4 +60,56 @@ function resetState() {
     }
 }
 
+function selectAnswer(e) {
+    const selectedBtn = e.target;
+    // Remove the "clicked-answer" class from previously selected buttons
+    const previouslySelectedButtons = document.querySelectorAll(".clicked-answer");
+    previouslySelectedButtons.forEach((button) => {
+        button.classList.remove("clicked-answer");
+    });
+
+    // Add the "clicked-answer" class to the currently selected button
+    selectedBtn.classList.add("clicked-answer");
+
+    nextButton.style.display = "block";
+}
+
+function displayResults() {
+    resetState();
+    questionElement.innerHTML = `This is where the results will be displayed`;
+    nextButton.innerHTML = "Try Again";
+    nextButton.style.display = "block";
+}
+
+function handleNextButton() {
+    currentQuestionIndex++;
+    if (currentQuestionIndex < questions.length) {
+        showQuestion();
+    } else {
+        displayResults();
+    }
+}
+
+nextButton.addEventListener("click", () => {
+
+
+
+    if (currentQuestionIndex < questions.length) {
+        handleNextButton();
+    } else {
+        startQuiz();
+    }
+})
+
 startQuiz();
+
+// Logic for adding points
+// if (answer.type === "A") {
+//     typeACount++;
+// } else if (answer.type === "B") {
+//     typeBCount++;
+// } else if (answer.type === "C") {
+//     typeCCount++;
+// } else if (answer.type === "D") {
+//     typeDCount++;
+// }
