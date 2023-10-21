@@ -1,6 +1,6 @@
 const questions = [
     {
-        question: "What interests you most about the software engineering career path?",
+        question: "What interests you most about a career in Software Engineering?",
         answers: [
             { text: "Earning potential. I want to make money - and lots of it!", type: "A" },
             { text: "Scope of work. I find creating things, problem solving, and working with others rewarding.", type: "B" },
@@ -12,7 +12,33 @@ const questions = [
         answers: [
             { text: "I prefer to work on my own, but I’ll add other people into the loop as needed.", type: "A" },
             { text: "I enjoy working in teams, especially on large projects where we each have individual components to bring to the table.", type: "B" },
-            { text: "I’d rather work on my own. If you want it done right, do it yourself!", type: "C" }
+            { text: "I’d rather work on my own. If you want it done right, do it yourself!", type: "Z" }
+        ]
+    },
+    {
+        question: "What’s your philosophy on learning within your career?",
+        answers: [
+            { text: "I’ll take whatever certifications or courses are needed to help me succeed in my career or that are required by my manager.", type: "A" },
+            { text: "I’m a lifelong learner. I’ll go out of my way to learn new skills or research something I don’t know, even if it’s in the moment.", type: "B" },
+            { text: "Once I’ve landed the job, I don’t think I need to learn much more. Right?", type: "Z" }
+        ]
+    },
+    {
+        question: "Are you a perfectionist?",
+        answers: [
+            { text: "Absolutely! If it’s not perfect and buttoned up the first time around, I shut down.", type: "A" },
+            { text: "I like things done well and done right, but I’m okay if it takes a few tries to get there. The journey is just as important as the destination.", type: "B" },
+            { text: "Not really. Something doesn’t need to be perfect for it to work.", type: "C" }
+
+        ]
+    },
+    {
+        question: "Do you prefer to see the big picture or the small details that make it up?",
+        answers: [
+            { text: "Small details are the only thing that helps the big picture come together.", type: "A" },
+            { text: "I look at both — they’re weighted equally in my book.", type: "B" },
+            { text: "Big picture only. I don’t get bogged down in the small details.", type: "C" }
+
         ]
     }
 ];
@@ -100,6 +126,9 @@ function selectAnswer(e) {
                 typeCCount--;
             } else if (previouslySelectedType === "D") {
                 typeDCount--;
+            } else if (previouslySelectedType === "Z") {
+                typeCCount--;
+                typeDCount--;
             }
         }
 
@@ -111,6 +140,9 @@ function selectAnswer(e) {
         } else if (selectedType === "C") {
             typeCCount++;
         } else if (selectedType === "D") {
+            typeDCount++;
+        } else if (selectedType === "Z") {
+            typeCCount++;
             typeDCount++;
         }
 
