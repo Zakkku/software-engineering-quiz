@@ -70,6 +70,47 @@ function resetState() {
 
 function selectAnswer(e) {
     const selectedBtn = e.target;
+    const selectedAnswer = questions[currentQuestionIndex].answers.find(
+        (answer) => answer.text === selectedBtn.innerHTML
+    );
+
+    if (selectedAnswer) {
+        const selectedType = selectedAnswer.type;
+        //console.log(selectedType)
+        // Check if there was a previously selected answer for the current question
+        const previouslySelectedAnswer = questions[currentQuestionIndex].answers.find(
+            (answer) => answer.text !== selectedBtn.innerHTML && answer.isSelected
+        );
+        // Decrement the count of the previously selected answer
+        if (previouslySelectedAnswer) {
+            const previouslySelectedType = previouslySelectedAnswer.type;
+            if (previouslySelectedType === "A") {
+                typeACount--;
+            } else if (previouslySelectedType === "B") {
+                typeBCount--;
+            } else if (previouslySelectedType === "C") {
+                typeCCount--;
+            } else if (previouslySelectedType === "D") {
+                typeDCount--;
+            }
+        }
+
+        // Increment the count of the selected answer
+        if (selectedType === "A") {
+            typeACount++;
+        } else if (selectedType === "B") {
+            typeBCount++;
+        } else if (selectedType === "C") {
+            typeCCount++;
+        } else if (selectedType === "D") {
+            typeDCount++;
+        }
+
+        // Mark the selected answer as isSelected
+        questions[currentQuestionIndex].answers.forEach(answer => {
+            answer.isSelected = answer === selectedAnswer;
+        });
+    }
     // Remove the "clicked-answer" class from previously selected buttons
     const previouslySelectedButtons = document.querySelectorAll(".clicked-answer");
     previouslySelectedButtons.forEach((button) => {
@@ -86,7 +127,7 @@ function selectAnswer(e) {
 
 function displayResults() {
     resetState();
-    questionElement.innerHTML = `This is where the results will be displayed`;
+    questionElement.innerHTML = `Type A: ${typeACount}, Type B: ${typeBCount}, Type C: ${typeCCount}, Type D: ${typeDCount}`;
     nextButton.innerHTML = "Try Again";
     nextButton.style.display = "block";
 }
