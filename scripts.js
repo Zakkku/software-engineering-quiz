@@ -43,6 +43,12 @@ const questions = [
     }
 ];
 
+const welcomePage = document.getElementById("welcome-page");
+const quizContainer = document.querySelector(".quiz");
+
+const startQuizButton = document.getElementById("start-quiz-btn");
+startQuizButton.addEventListener("click", startQuiz);
+
 const questionElement = document.getElementById("question");
 const answerButtons = document.getElementById("answer-buttons");
 const nextButton = document.getElementById("next-btn");
@@ -54,7 +60,22 @@ let typeBCount = 0;
 let typeCCount = 0;
 let typeDCount = 0;
 
+function initializeWelcomePage() {
+    // Show the welcome page
+    welcomePage.style.display = "block";
+
+    // Hide the quiz container
+    quizContainer.style.display = "none";
+}
+
 function startQuiz() {
+
+    // Hide the welcome page
+    welcomePage.style.display = "none";
+
+    // Show the quiz container
+    quizContainer.style.display = "block";
+
     currentQuestionIndex = 0;
     typeACount = 0;
     typeBCount = 0;
@@ -200,9 +221,9 @@ nextButton.addEventListener("click", () => {
 
         handleNextButton();
     } else {
-        startQuiz();
+        initializeWelcomePage();
     }
 })
 
-startQuiz();
+initializeWelcomePage();
 
