@@ -40,6 +40,50 @@ const questions = [
             { text: "Big picture only. I don’t get bogged down in the small details.", type: "C" }
 
         ]
+    },
+    {
+        question: "Which best describes your relationship with Mathematics?",
+        answers: [
+            { text: "I didn't really like math but I made it through the classes.", type: "A" },
+            { text: "I love solving problems and I always made good scores in my math classes.", type: "B" },
+            { text: "I barely made it through college algebra", type: "C" },
+            { text: "I failed college algebra (or lower level math) multiple times and really struggled", type: "D" }
+
+        ]
+    },
+    {
+        question: "You are asked the following question in an interview: 'Estimate the number of golf balls that could fit into a school bus.' How do you respond?",
+        answers: [
+            { text: "I would ask follow-up questions to try to get more context (and buy myself some time!).", type: "A" },
+            { text: "I would use what I already know about school buses and golf balls to make an educated guess. I might ask if I can draw a diagram.", type: "B" },
+            { text: "I would probably panic and try to talk my way out of providing a firm answer.", type: "C" },
+            { text: "I have no idea. What kind of a question is that...?", type: "D" }
+
+        ]
+    },
+    {
+        question: "Which pair is the same?",
+        answers: [
+            { text: "jkojaspfshaskf - jkojaspfskaskf", type: "C" },
+            { text: "qwjedasjasnbm - qwjedsjasbnm", type: "C" },
+            { text: "wyesdsdLxvc - wyesdsdlxvc", type: "C" },
+            { text: "iqtgiwegasdio - iqtgiwegasdio", type: "B" },
+            { text: "jasbhuhoqhwlk - jasbhunoqhwlk", type: "C" },
+            { text: "poanksdnupwb - poanksdnuqwb", type: "C" },
+            { text: "None of them are the same", type: "D" }
+
+        ]
+    },
+    {
+        question: "If gorblflur means fan belt -- pixngorbl means ceiling fan -- arthtusl means tile roof. How would you make the word 'ceiling tile'?",
+        answers: [
+            { text: "flurgorbl", type: "C" },
+            { text: "arthflur", type: "C" },
+            { text: "pixnarth", type: "B" },
+            { text: "gorbltusl", type: "C" },
+            { text: "It's not possible.", type: "D" }
+
+        ]
     }
 ];
 
