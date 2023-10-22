@@ -84,6 +84,13 @@ body {
     color: #fff;
 }
 
+#result {
+    font-size: 24px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+
+}
+
 /* Media Queries */
 @media only screen and (max-width: 600px) {
     .app {

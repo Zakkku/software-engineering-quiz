@@ -198,7 +198,7 @@ function displayResults() {
     } else if (typeDCount > typeACount && typeDCount > typeBCount && typeDCount > typeCCount) {
         usersPersonalityType = "You are type D";
     }
-    questionElement.innerHTML = usersPersonalityType;
+    questionElement.innerHTML = '<div id="result">' + usersPersonalityType + '</div';;
     nextButton.innerHTML = "Try Again";
     nextButton.style.display = "block";
 }
