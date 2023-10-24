@@ -84,6 +84,26 @@ const questions = [
             { text: "It's not possible.", type: "D" }
 
         ]
+    },
+    {
+        question: "The Big Cheese Factory makes 10 wheels of cheese every 6 minutes. How long will it take the Big Cheese Factory to produce 450 wheels of cheese?",
+        answers: [
+            { text: "3 hours", type: "C" },
+            { text: "7.5 hours", type: "C" },
+            { text: "4.5 hours", type: "B" },
+            { text: "none of the above", type: "D" }
+
+        ]
+    },
+    {
+        question: "Here is a program in Ruby, a popular programming language: a = 10, b = 20, and then a = b. Once the program has been executed, what do you think the value of a would be?",
+        answers: [
+            { text: "20", type: "B" },
+            { text: "nil", type: "C" },
+            { text: "10", type: "A" },
+            { text: "none of the above", type: "D" }
+
+        ]
     }
 ];
 
