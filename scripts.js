@@ -296,7 +296,7 @@ function displayResults() {
             usersPersonalityType = "Software Engineering might not be the best path for you. It appears that pursuing a career in software engineering may not align perfectly with your natural traits and preferences. While this doesn't completely rule out the possibility of entering the field, it's important to consider whether this path truly resonates with your interests and characteristics. Keep in mind that anything is possible and hard work always trumps natural talent. There are proven cases of people who didn't even own a computer, had absolutely zero skills in tech, signed up for a 3-month coding bootcamp and eventually became successful software engineers. But you better believe that path was a hard one, full of stress and hardships. The final outcome will always be worth it though."; // Type D
         }
 
-        questionElement.innerHTML = '<div id="result">' + usersPersonalityType + '</div';;
+        questionElement.innerHTML = '<div id="result">' + usersPersonalityType + '</div>' + '\n' + '\n' + 'new line goes here';;
         nextButton.innerHTML = "Try Again";
         nextButton.style.display = "block";
     }, 2500);
