@@ -52,6 +52,16 @@ const questions = [
         ]
     },
     {
+        question: "Do you like reading?",
+        answers: [
+            { text: "I don't usually read but sometimes I find a book I'm intersted in and read the whole thing", type: "A" },
+            { text: "I'm an avid reader. I love a good book and I'm always reading.", type: "B" },
+            { text: "I never read books but I will read things like newspapers and magazines.", type: "A" },
+            { text: "I hate reading. I don't even want to spend 20 seconds to read a long Facebook post", type: "D" }
+
+        ]
+    },
+    {
         question: "You are asked the following question in an interview: 'Estimate the number of golf balls that could fit into a school bus.' How do you respond?",
         answers: [
             { text: "I would ask follow-up questions to try to get more context (and buy myself some time!).", type: "A" },
@@ -102,6 +112,26 @@ const questions = [
             { text: "nil", type: "C" },
             { text: "10", type: "A" },
             { text: "none of the above", type: "D" }
+
+        ]
+    },
+    {
+        question: "Which one of the JavaScript examples below will put only even numbers inside of the newArray variable? let numbers = [100, 50, 1, 25, 20]",
+        answers: [
+            { text: "let new_array = numbers.filter(num => num % 2 === 0);", type: "B" },
+            { text: "let new_array = numbers.filter(num => num % 3 === 0);", type: "A" },
+            { text: "let new_array = numbers.filter(num => num % 50 === 0);", type: "C" },
+            { text: "none of the above", type: "D" }
+
+        ]
+    },
+    {
+        question: "Which of these returns 'Hi! Hi! Hi!' in JavaScript?",
+        answers: [
+            { text: "console.log('Hi!'{number}>3>number);", type: "C" },
+            { text: "console.log('Hi! ' x 3);", type: "A" },
+            { text: "console.log('Hi! '.repeat(3));", type: "B" },
+            { text: "I don't know", type: "D" }
 
         ]
     }
@@ -254,13 +284,13 @@ function displayResults() {
     resetState();
     let usersPersonalityType;
     if (typeBCount >= typeACount && typeBCount >= typeCCount && typeBCount >= typeDCount) {
-        usersPersonalityType = "You are type B";
+        usersPersonalityType = "Are you sure you aren't a Software Engineer already??"; // Type B
     } else if (typeACount > typeBCount && typeACount >= typeCCount && typeACount >= typeDCount) {
-        usersPersonalityType = "You are type A";
+        usersPersonalityType = "You exhibit some of the qualities a Software Engineer needs"; // Type A
     } else if (typeCCount > typeACount && typeCCount > typeBCount && typeCCount >= typeDCount) {
-        usersPersonalityType = "You are type C";
+        usersPersonalityType = "While you may not inherently possess all the traits of a Software Engineer, all skills are just muscles that need some training!"; // Type C
     } else if (typeDCount > typeACount && typeDCount > typeBCount && typeDCount > typeCCount) {
-        usersPersonalityType = "You are type D";
+        usersPersonalityType = "Software Engineering might not be the best path for you"; // Type D
     }
     questionElement.innerHTML = '<div id="result">' + usersPersonalityType + '</div';;
     nextButton.innerHTML = "Try Again";
