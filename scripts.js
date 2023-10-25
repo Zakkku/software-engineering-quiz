@@ -284,7 +284,7 @@ function displayResults() {
     resetState();
     let usersPersonalityType;
     if (typeBCount >= typeACount && typeBCount >= typeCCount && typeBCount >= typeDCount) {
-        usersPersonalityType = "Are you sure you aren't a Software Engineer already??"; // Type B
+        usersPersonalityType = "Are you sure you aren't a Software Engineer already?? This result suggests that you might already be a great fit for a career in software engineering. Your willingness to embrace the scope of the work, learn while on the job, and collaborate effectively with others aligns well with the traits of a successful software engineer. You're on the right path. To further solidify your potential in this field, consider expanding your knowledge by learning different programming languages and building a strong portfolio of projects to showcase your skills. Your attitude and attributes make you a strong candidate for success in this career."; // Type B
     } else if (typeACount > typeBCount && typeACount >= typeCCount && typeACount >= typeDCount) {
         usersPersonalityType = "You exhibit some of the qualities a Software Engineer needs"; // Type A
     } else if (typeCCount > typeACount && typeCCount > typeBCount && typeCCount >= typeDCount) {
