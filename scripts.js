@@ -46,18 +46,18 @@ const questions = [
         answers: [
             { text: "I didn't really like math but I made it through the classes.", type: "A" },
             { text: "I love solving problems and I always made good scores in my math classes.", type: "B" },
-            { text: "I barely made it through college algebra", type: "C" },
-            { text: "I failed college algebra (or lower level math) multiple times and really struggled", type: "D" }
+            { text: "I barely made it through college algebra.", type: "C" },
+            { text: "I failed college algebra (or lower level math) multiple times and really struggled.", type: "D" }
 
         ]
     },
     {
         question: "Do you like reading?",
         answers: [
-            { text: "I don't usually read but sometimes I find a book I'm intersted in and read the whole thing", type: "A" },
+            { text: "I don't usually read but sometimes I find a book I'm intersted in and read the whole thing.", type: "A" },
             { text: "I'm an avid reader. I love a good book and I'm always reading.", type: "B" },
             { text: "I never read books but I will read things like newspapers and magazines.", type: "A" },
-            { text: "I hate reading. I don't even want to spend 20 seconds to read a long Facebook post", type: "D" }
+            { text: "I hate reading. I don't even want to spend 20 seconds to read a long Facebook post.", type: "D" }
 
         ]
     },
@@ -116,12 +116,12 @@ const questions = [
         ]
     },
     {
-        question: "Which one of the JavaScript examples below will put only even numbers inside of the newArray variable? let numbers = [100, 50, 1, 25, 20]",
+        question: "Which one of the JavaScript examples below will put only even numbers inside of the newArray variable? let numbers = [100, 50, 1, 25, 20];",
         answers: [
-            { text: "let new_array = numbers.filter(num => num % 2 === 0);", type: "B" },
-            { text: "let new_array = numbers.filter(num => num % 3 === 0);", type: "A" },
-            { text: "let new_array = numbers.filter(num => num % 50 === 0);", type: "C" },
-            { text: "none of the above", type: "D" }
+            { text: "let newArray = numbers.filter(num => num % 2 === 0);", type: "B" },
+            { text: "let newArray = numbers.filter(num => num % 3 === 0);", type: "A" },
+            { text: "let newArray = numbers.filter(num => num % 50 === 0);", type: "C" },
+            { text: "I don't know", type: "D" }
 
         ]
     },
