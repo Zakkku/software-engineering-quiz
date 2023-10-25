@@ -290,9 +290,15 @@ function displayResults() {
         let personalityExplanation1;
 
         if (typeBCount >= typeACount && typeBCount >= typeCCount && typeBCount >= typeDCount) {
-            usersPersonalityTypeHeader = "Are you sure you aren't a Software Engineer already?? This result suggests that you might already be a great fit for a career in software engineering. Your willingness to embrace the scope of the work, learn while on the job, and collaborate effectively with others aligns well with the traits of a successful software engineer. You're on the right path. To further solidify your potential in this field, consider expanding your knowledge by learning different programming languages and building a strong portfolio of projects to showcase your skills. Your attitude and attributes make you a strong candidate for success in this career."; // Type B
+            // Type B
+            usersPersonalityTypeHeader = "Are you sure you aren't a Software Engineer already??";
+            personalityExplanation = "This result suggests that you might already be a great fit for a career in software engineering. Your problem solving skills combined with a willingness to embrace the scope of the work, learn while on the job, and collaborate effectively with others aligns well with the traits of a successful software engineer.";
+            personalityExplanation1 = "You're on the right path. To further solidify your potential in this field, consider expanding your knowledge by learning different programming languages and building a strong portfolio of projects to showcase your skills. Your attitude and attributes make you a strong candidate for success in this career.";
         } else if (typeACount > typeBCount && typeACount >= typeCCount && typeACount >= typeDCount) {
-            usersPersonalityTypeHeader = "You exhibit some of the qualities a Software Engineer needs. This result suggests that you have some qualities that align with those needed in the field of software engineering. However, it's important to be cautious about getting overly fixated on small details without keeping the bigger picture in mind. Software engineers need to balance both aspects. Additionally, understand that perfection isn't the goal; it's about continuous improvement. More often than not, your code will not be perfect the first, second, even fifth time around, so striving for perfection isn’t in the best interest of a software engineer. You have the right traits for learning on the job and collaborating with others, but these are skills you'll want to continue developing if you choose the path of software engineering."; // Type A
+            // Type A
+            usersPersonalityTypeHeader = "You exhibit some of the qualities a Software Engineer needs.";
+            personalityExplanation = "This result suggests that you have some qualities that align with those needed in the field of software engineering. However, it's important to be cautious about getting overly fixated on small details without keeping the bigger picture in mind. Software engineers need to balance both aspects.";
+            personalityExplanation1 = "Additionally, understand that perfection isn't the goal; it's about continuous improvement. More often than not, your code will not be perfect the first, second, even fifth time around, so striving for perfection isn’t in the best interest of a software engineer. You have the right traits for learning on the job and collaborating with others, but these are skills you'll want to continue developing if you choose the path of software engineering.";
         } else if (typeCCount > typeACount && typeCCount > typeBCount && typeCCount >= typeDCount) {
             // Type C
             usersPersonalityTypeHeader = "While you may not inherently possess all the traits of a Software Engineer, all skills are just like muscles that need some training!",
@@ -305,10 +311,10 @@ function displayResults() {
             personalityExplanation1 = "There are proven cases of people who didn't even own a computer, had absolutely zero skills in tech, signed up for a 3-month coding bootcamp and eventually became successful software engineers. But you better believe that path was a hard one, full of stress and hardships. The final outcome will always be worth it though, when you're making a six-figure salary after just a few years in the industry.";
         }
 
-        questionElement.innerHTML = '<div id="result">' + '<h1 id="result-h1">' + usersPersonalityTypeHeader + '</h1>' + '<p class="result-p">' + personalityExplanation + '</p>' + '<p class="result-p">' + personalityExplanation1 + '</p>' + '</div>' + '<p class="result-p">' + 'Jump right into your first lines of code at ' + '<a target="_blank" href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-1">freeCodeCamp.org</a>' + '</p>';
+        questionElement.innerHTML = '<div id="result">' + '<h1 id="result-h1">' + usersPersonalityTypeHeader + '</h1>' + '<p class="result-p">' + personalityExplanation + '</p>' + '<p class="result-p">' + personalityExplanation1 + '</p>' + '</div>' + '<p class="result-p">' + 'Jump right into your first lines of code at ' + '<a target="_blank" href="https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-1">freeCodeCamp.org</a>' + '</p>' + '<p class="result-p">' + 'Get more in depth understanding and focused goals at ' + '<a target="_blank" href="https://www.theodinproject.com/paths">The Odin Project</a>' + '</p>' + '<p class="result-p">' + 'This quiz was created by ' + '<a target="_blank" href="https://www.zach-japan.com/">Zach in Japan</a>' + ', a former English teacher who went from ZERO to full-time Software Engineer at a Japanese tech company.' + '</p>';
         nextButton.innerHTML = "Try Again";
         nextButton.style.display = "block";
-    }, 2500);
+    }, 2300);
 }
 
 function handleNextButton() {
