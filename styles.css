@@ -111,11 +111,11 @@ body {
     }
 
     .app h1 {
-        font-size: 28px;
+        font-size: 30px;
     }
 
     #next-btn,
     #start-quiz-btn {
-        font-size: 20px;
+        font-size: 18px;
     }
 }
