@@ -9,6 +9,11 @@ body {
     background: #001e4d;
 }
 
+.italic-text {
+    font-style: italic;
+}
+
+
 .app {
     background: #fff;
     width: 90%;
