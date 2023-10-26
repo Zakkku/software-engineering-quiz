@@ -54,7 +54,7 @@ const questions = [
     {
         question: "Do you like reading?",
         answers: [
-            { text: "I don't usually read but sometimes I find a book I'm intersted in and read the whole thing.", type: "A" },
+            { text: "I don't usually read but sometimes I find a book I'm interested in and read the whole thing.", type: "A" },
             { text: "I'm an avid reader. I love a good book and I'm always reading.", type: "B" },
             { text: "I never read books but I will read things like newspapers and magazines.", type: "A" },
             { text: "I hate reading. I don't even want to spend 20 seconds to read a long Facebook post.", type: "D" }
@@ -128,7 +128,7 @@ const questions = [
     {
         question: "Which of these returns 'Hi! Hi! Hi!' in JavaScript?",
         answers: [
-            { text: "console.log('Hi!'{number}>3>number);", type: "C" },
+            { text: "console.log('Hi!'{num}>3>num);", type: "C" },
             { text: "console.log('Hi! ' x 3);", type: "A" },
             { text: "console.log('Hi! '.repeat(3));", type: "B" },
             { text: "I don't know", type: "D" }
